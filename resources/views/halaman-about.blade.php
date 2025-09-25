@@ -5,6 +5,6 @@
 </head>
 <body>
     <h1>Ini adalah halaman About</h1>
-    <p>Laravel membuat development lebih cepat ikfhwvnwjf</p>
+    <p>Laravel membuat development lebih cepat erdgerge</p>
 </body>
 </html>
