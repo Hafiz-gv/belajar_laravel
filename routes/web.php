@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MahasiswaController;
 
 Route::get('/mahasiswa', function () {
-    return 'Hallo Mahasiswa';
+    return 'Hallo aku boxer';
 });
 
 /**
