@@ -7,7 +7,7 @@ use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\HomeController;
 
 Route::get('/mahasiswa', function () {
-    return 'Hallo Mahasiswa';
+    return 'Hallo aku boxer';
 });
 
 /**
