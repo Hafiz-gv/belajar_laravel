@@ -27,13 +27,23 @@ class QuestionController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        $nama      = $request->nama;
+        $email     = $request->email;
+        $pertanyan= $request->pertanyaan;
 
-        $data['nama']       = $request->nama;
-        $data['email']      = $request->email;
-        $data['pertanyaan'] = $request->pertanyaan;
+       $pesan = "Terimakasih {$nama}! Pertanyaan Anda : '{$pertanyan}' akan segera direspon melalui email {$email}";
 
-        return view('home-question-respon' , $data);
+        // return redirect()->route('home');
+
+
+        // return view('home-question-respon', $data);
+
+
+        // return redirect()->route('home')->with('info', 'Terimakasih ,
+        //                                         pertanyaan anda telah terkirim' );
+
+
+        return redirect()->back()->with('info', $pesan);
     }
 
     /**
@@ -41,7 +51,16 @@ class QuestionController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = [
+            'nama'       => $nama,
+            'email'      => $email,
+            'pertanyaan' => $pertanyan,
+        ];
+
+        return view('home-question-respon', $data);
+        // return redirect()->route('home')->with('info', 'Selamat, Kamu Lulus!');
+
+        return redirect()->back()->with('info', 'Oops... Saldo Kamu Kurang!');
     }
 
     /**
