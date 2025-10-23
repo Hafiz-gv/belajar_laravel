@@ -55,7 +55,7 @@
                     <span class="sidebar-text">Dashboard</span>
                 </a>
             </li>
-            <li class="nav-item  active ">
+            <li class="nav-item {{ request()->routeIs('pelanggan.*') ? 'active' : '' }}">
                 <a href="{{ route('pelanggan.index') }}" class="nav-link">
                     <span class="sidebar-icon">
                         <svg class="icon icon-xs me-2" data-slot="icon" fill="none" stroke-width="1.5"
@@ -66,7 +66,7 @@
                             </path>
                         </svg>
                     </span>
-                    <span class="sidebar-text">Pelanggan</span>
+                    <span>Pelanggan</span>
                 </a>
             </li>
 
